@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task List</title>
+    <link rel="stylesheet" type="text/css" href="./styles/task-list.css">
+  </head>
+  <body>
+    <form name="task-list">
+      <fieldset>
+         <legend>Person</legend>
+           <input type="radio" name="handler" value="Jeremy">
+           Jeremy
+           <input type="radio" name="handler" value="John">
+           John
+           <input type="radio" name="handler" value="Jimmy">
+           Jimmy
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Task Information</legend>
+        <br>
+        <label> Task difficulty:
+          <select name="difficulty">
+            <option  value="Easy">Easy</option>
+            <option  value="Simple">Simple</option>
+            <option  value="Difficult">Difficult</option>
+            <option  value="Dangerous">Dangerous</option>
+          </select>
+        </label>
+        <label> Task Description:
+          <textarea name="taskdes" rows="4" cols="50"> </textarea>
+        </label>
+      </fieldset>
+      <br>
+      <input type="submit" name="submit" value="submit">
+    </form>
+    <ul id="list-container"> </ul>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+  <!--Load the AJAX API-->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="scripts/task-list.js"></script>
+</html>
